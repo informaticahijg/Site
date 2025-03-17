@@ -1,0 +1,90 @@
+body{margin:0;padding:0;background: linear-gradient(0deg, rgba(235,251,236,1) 0%, rgba(161,226,163,1) 100%);}
+body::-webkit-scrollbar{width:12px;}
+body::-webkit-scrollbar-track{background:#66c669;}
+body::-webkit-scrollbar-thumb{background:#fff;}
+
+div#barra{
+	position:fixed;
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: center;
+	justify-content:space-between;
+	align-items: center;
+	padding:0 30px;
+	width:calc(100% - 60px);
+	height:50px;
+	box-shadow:0px 3px 5px #666;
+	background:#fff;
+}
+
+div#barra img{
+	object-fit:cover;
+	height:40px;
+}
+
+span#menu {
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	max-width:800px;
+	height:100%;
+}
+
+span#menu a{
+	width:80px;
+	font-family:arial;
+	font-weight:bold;
+	text-transform:uppercase;
+	text-align:center;
+	font-size:11px;
+	text-decoration:none;
+	color:#000;
+	transition-property: color, font-size;
+	transition-duration: 0.1s;
+	transition-timing-function: ease-in-out;
+}
+
+span#menu a:hover{
+	font-size:12px;
+	color:#006;
+}
+
+.waves {
+	position:absolute;
+	bottom:0;
+	width: 100%;
+	height:15vh;
+	margin-bottom:-7px; /*Fix for safari gap*/
+	min-height:100px;
+	max-height:150px;
+}
+
+.parallax > use {
+	animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) {
+	animation-delay: -2s;
+	animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+	animation-delay: -3s;
+	animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+	animation-delay: -4s;
+	animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+	animation-delay: -5s;
+	animation-duration: 20s;
+}
+@keyframes move-forever {
+	0% {
+		transform: translate3d(-90px,0,0);
+	}
+	100% { 
+		transform: translate3d(85px,0,0);
+	}
+}
